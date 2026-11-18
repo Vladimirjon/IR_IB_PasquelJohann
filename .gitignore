@@ -1,1 +1,24 @@
+# Entorno virtual y cachés
 /.venv
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Credenciales y secretos: nunca se suben
+.env
+.env.*
+*.pem
+*.key
+*.p12
+secrets.*
+.vercel/
+
+# Datos descargados y archivos regenerables (el cuaderno los vuelve a crear)
+datos/
+nltk_data/
+resultados/servicio_local.log
+
+# Configuración local de herramientas
+.claude/
