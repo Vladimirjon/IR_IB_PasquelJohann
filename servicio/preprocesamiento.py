@@ -10,7 +10,7 @@ TOKEN_RE = re.compile(r"[a-z0-9]+")
 _STEMMER = PorterStemmer()
 
 
-@lru_cache(maxsize=None)
+@lru_cache(maxsize=100_000)   # acotada: el servicio es público y no debe crecer sin límite
 def _raiz(token: str) -> str:
     return _STEMMER.stem(token)
 
